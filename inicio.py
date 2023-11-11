@@ -38,7 +38,6 @@ def pagina_inicio():
     col1.image(imagen2, caption="Pickachu 🌠", use_column_width=False)
     col2.image(imagen1, caption="Ironman 🚀", use_column_width=False)
     col3.image(imagen3, caption="Capibara 🛸", use_column_width=False)
-    return num_jugadores
 
 
 def pagina_lobby():
