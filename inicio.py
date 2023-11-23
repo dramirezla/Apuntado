@@ -4,14 +4,12 @@ import io
 import pandas as pd
 import random
 
-imagen_ironman = "OIG.jpg"
-imagen1 = Image.open(imagen_ironman)
-
-imagen_picka = "OIG (1).jpg"
-imagen2 = Image.open(imagen_picka)
+cartas_clasicas=Image.open("az clasico.png")
 
 imagen_capi = "OIG (2).jpg"
 imagen3 = Image.open(imagen_capi)
+
+interfaz_usuario = Image.open("capibara.png")
 
 def pagina_inicio():   
     st.title("🃏 ¡Bienvenido a Apuntado! 🎲")
@@ -19,7 +17,7 @@ def pagina_inicio():
     modo_juego = st.selectbox("Selecciona el modo de juego",["Jugador vs jugador","Jugador vs bots"])
     if modo_juego == "Jugador vs jugador":
         num_jugadores = st.selectbox("¿Cuántos jugadores participarán?",[2,3,4,5])
-    diseño_cartas = st.selectbox("🎨 Elige el diseño de las cartas",["Pickachu","Ironman","Capibara"])
+    diseño_cartas = st.selectbox("🎨 Elige el diseño de las cartas",["Clasicas","Capibara"])
 
     colum1, colum2=st.columns(2)
     with colum1.expander("**🎲 Reglas del Juego**"):
@@ -34,10 +32,8 @@ def pagina_inicio():
         else:
             st.write("🎉 ¡Configuración exitosa! Dirígete al lobby.")
 
-    col1,col2,col3=st.columns(3)
-    col1.image(imagen2, caption="Pickachu 🌠", use_column_width=False)
-    col2.image(imagen1, caption="Ironman 🚀", use_column_width=False)
-    col3.image(imagen3, caption="Capibara 🛸", use_column_width=False)
+    st.image(imagen3, caption="Capibara 🛸", use_column_width=False)
+    st.image(cartas_clasicas, caption="Clasicas",use_column_width=False)
 
 
 def pagina_lobby():
@@ -260,7 +256,7 @@ Fecha de entrada en vigor: Octubre 28 del 2023
 
 def pagina_juego():
     st.title("🃏 Sala de Juego")
-    st.write("🔍 Observa tus cartas y apuestas aquí.")
+    st.image(interfaz_usuario, caption="Interfaz de juego", use_column_width=True)
 
 # Menú de navegación en la barra lateral
 pagina_actual = st.sidebar.selectbox("Selecciona una Interfaz", ["Inicio", "Lobby", "Juego"])
