@@ -11,6 +11,16 @@ imagen3 = Image.open(imagen_capi)
 
 interfaz_usuario = Image.open("capibara.png")
 
+
+###################################
+
+corazon_1 = Image.open("Cartas/corazon/1.png")
+st.image(corazon_1)
+
+
+
+
+
 def pagina_inicio():   
     st.title("🃏 ¡Bienvenido a Apuntado! 🎲")
     st.write("¡Prepárate para una emocionante experiencia de juego de cartas! Elige tu modo de juego y diseño de cartas.")
