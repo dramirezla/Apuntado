@@ -15,10 +15,35 @@ interfaz_usuario = Image.open("capibara.png")
 ###################################
 
 corazon_1 = Image.open("Cartas/corazon/1.png")
-st.image(corazon_1)
+corazon_5 = Image.open("Cartas/corazon/5.png")
+corazon_7 = Image.open("Cartas/corazon/7.png")
+corazon_9 = Image.open("Cartas/corazon/9.png")
+corazon_J = Image.open("Cartas/corazon/J.png")
+corazon_K = Image.open("Cartas/corazon/K.png")
+corazon_Q = Image.open("Cartas/corazon/Q.png")
 
+diamante_1 = Image.open("Cartas/diamante/1.png")
+diamante_2 = Image.open("Cartas/diamante/2.png")
+diamante_3 = Image.open("Cartas/diamante/3.png")
+diamante_4 = Image.open("Cartas/diamante/4.png")
+diamante_5 = Image.open("Cartas/diamante/5.png")
+diamante_6 = Image.open("Cartas/diamante/6.png")
+diamante_A = Image.open("Cartas/diamante/A.png")
 
+picas_7 = Image.open("Cartas/picas/7.png")
+picas_8 = Image.open("Cartas/picas/8.png")
+picas_9 = Image.open("Cartas/picas/9.png")
+picas_10 = Image.open("Cartas/picas/10.png")
+picas_J = Image.open("Cartas/picas/J.png")
+picas_K = Image.open("Cartas/picas/K.png")
+picas_Q = Image.open("Cartas/picas/Q.png")
 
+trebol_2 = Image.open("Cartas/trebol/2.png")
+trebol_4 = Image.open("Cartas/trebol/4.png")
+trebol_6 = Image.open("Cartas/trebol/6.png")
+trebol_8 = Image.open("Cartas/trebol/8.png")
+trebol_A = Image.open("Cartas/trebol/A.png")
+trebol_Q = Image.open("Cartas/trebol/Q.png")
 
 
 def pagina_inicio():   
@@ -42,8 +67,9 @@ def pagina_inicio():
         else:
             st.write("🎉 ¡Configuración exitosa! Dirígete al lobby.")
 
-    st.image(imagen3, caption="Capibara 🛸", use_column_width=False)
-    st.image(cartas_clasicas, caption="Clasicas",use_column_width=False)
+    
+    colum1.image(imagen3, caption="Capibara 🛸", use_column_width=False)
+    colum2.image(cartas_clasicas, caption="Clasicas",use_column_width=False)
 
 
 def pagina_lobby():
@@ -267,6 +293,39 @@ Fecha de entrada en vigor: Octubre 28 del 2023
 def pagina_juego():
     st.title("🃏 Sala de Juego")
     st.image(interfaz_usuario, caption="Interfaz de juego", use_column_width=True)
+    col1,col2,col3,col4,col5,col6,col7 = st.columns(7) 
+
+
+    col1.image(corazon_1)
+    col2.image(corazon_5)
+    col3.image(corazon_7)
+    col4.image(corazon_9)
+    col5.image(corazon_J)
+    col6.image(corazon_K)
+    col7.image(corazon_Q)
+
+    col1.image(diamante_1)
+    col2.image(diamante_2)
+    col3.image(diamante_3)
+    col4.image(diamante_4)
+    col5.image(diamante_5)
+    col6.image(diamante_6)
+    col7.image(diamante_A)
+
+    col1.image(picas_7)
+    col2.image(picas_8)
+    col3.image(picas_9)
+    col4.image(picas_10)
+    col5.image(picas_J)
+    col6.image(picas_K)
+    col7.image(picas_Q)
+
+    col1.image(trebol_2)
+    col2.image(trebol_4)
+    col3.image(trebol_6)
+    col4.image(trebol_8)
+    col5.image(trebol_A)
+    col6.image(trebol_Q)
 
 # Menú de navegación en la barra lateral
 pagina_actual = st.sidebar.selectbox("Selecciona una Interfaz", ["Inicio", "Lobby", "Juego"])
